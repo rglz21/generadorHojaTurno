@@ -29,22 +29,22 @@ boton.addEventListener("click", function(evento){
     doc.setFontType("bold");
 	doc.text(20, 20, 'Fecha: ');
     doc.setFontType("normal");
-    doc.text(40, 20, fecha.toLocaleString('en-GB').split(",")[0]);
+    doc.text(39, 20, fecha.toLocaleString('en-GB').split(",")[0]);
 
     doc.setFontType("bold");
 	doc.text(20, 30, 'Hora Entrega: ');
     doc.setFontType("normal");
-	doc.text(59, 30, horaI.value);
+	doc.text(58, 30, horaI.value);
 
     doc.setFontType("bold");
     doc.text(20,40, 'Entrega: ');
     doc.setFontType("normal");
-    doc.text(45,40,entrega.value);
+    doc.text(44,40,entrega.value);
 
     doc.setFontType("bold");
     doc.text(20,50, 'Recibe: ');
     doc.setFontType("normal");
-    doc.text(43,50,recibe.value);
+    doc.text(42,50,recibe.value);
 
     doc.setFontType("bold");
     doc.text(20,70, 'A) Procesos en ejecucion: ');
@@ -65,5 +65,6 @@ boton.addEventListener("click", function(evento){
     doc.save(`Hoja_de_Turno_${fecha.toLocaleString('en-GB').split(",")[0]}_${horaI.value}.pdf`);
   
 });
+
 
 
