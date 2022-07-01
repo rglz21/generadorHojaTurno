@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.2.0/css/bootstrap.css">
+    <title>Generador de Entrega de turnos. </title>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h1>Generador de Entrega de turnos </h1>
+        <hr>
+        <div class="row ">
+            <div class="col">
+              <label class="col-form-label" >Ingresar Fecha</label>
+              <input type="date" class="form-control" placeholder="Hora" aria-label="Hora" id="fecha">
+            </div>
+            <div class="col">
+                <div class="row">
+                  <div class="col"> 
+                    <label class="col-form-label" >Hora de entrega</label>
+                    <input type="time" class="form-control" placeholder="Hora inicial" aria-label="Hora" id="horaI">
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col">
+              <label class="col-form-label" >Entrega</label>
+              <input type="text" class="form-control" id="entrega" aria-label="Hora">
+            </div>
+            <div class="col">
+              <label class="col-form-label" >Recibe</label>
+              <input type="text" class="form-control" id="recibe" aria-label="Hora">
+            </div>
+        </div>
+        <br>
+            <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Procesos en ejecucion</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="procesosE"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputPassword3" class="col-sm-2 col-form-label">Indicaciones especiales</label>
+              <div class="col-sm-10">
+                <textarea class="form-control"  id="indicacionesE"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Comentarios especiales</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="comentariosE"></textarea>
+                </div>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3" id="generar">Generar Reporte</button>
+              </div>
+      </div>
+    <script src="JS/jsPDF/dist/jspdf.min.js"></script>
+    <script src="JS/generaPDF.js"></script>
+</body>
+</html>
