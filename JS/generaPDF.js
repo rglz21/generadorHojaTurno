@@ -23,28 +23,28 @@ boton.addEventListener("click", function(evento){
     doc.line(10, 8, 200, 8);
     doc.line(10,290, 200, 290);
 
-
+//Fecha
     doc.setFont("Arial");
     doc.setFontSize(12);
     doc.setFontType("bold");
-	doc.text(20, 20, 'Fecha: ');
+    doc.text(20, 20, 'Fecha: ');
     doc.setFontType("normal");
-    doc.text(39, 20, fecha.toLocaleString('en-GB').split(",")[0]);
-
+    doc.text(35, 20, fecha.toLocaleString('en-GB').split(",")[0]);
+//Hora
     doc.setFontType("bold");
-	doc.text(20, 30, 'Hora Entrega: ');
+    doc.text(20, 30, 'Hora Entrega: ');
     doc.setFontType("normal");
-	doc.text(58, 30, horaI.value);
-
+    doc.text(50, 30, horaI.value);
+//Entrega
     doc.setFontType("bold");
     doc.text(20,40, 'Entrega: ');
     doc.setFontType("normal");
-    doc.text(44,40,entrega.value);
-
+    doc.text(38,40,entrega.value);
+//Recibe
     doc.setFontType("bold");
     doc.text(20,50, 'Recibe: ');
     doc.setFontType("normal");
-    doc.text(42,50,recibe.value);
+    doc.text(37,50,recibe.value);
 
     doc.setFontType("bold");
     doc.text(20,70, 'A) Procesos en ejecucion: ');
@@ -65,6 +65,7 @@ boton.addEventListener("click", function(evento){
     doc.save(`Hoja_de_Turno_${fecha.toLocaleString('en-GB').split(",")[0]}_${horaI.value}.pdf`);
   
 });
+
 
 
 
